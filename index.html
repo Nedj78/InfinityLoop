@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="./images/infinity.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Loop</title>
+</head>
+<body onload="AutoRefresh(1000);">
+    <h1 id="title"></h1>
+    <h2 id="status"></h2>
+    <img src="./images/Loop.webp" width="50%">
+    <script>
+        document.getElementById("title").innerHTML = "The Infinite Loop";
+
+        function AutoRefresh(t) {
+            setTimeout(function() {
+                location.reload(true); 
+            }, t);
+
+            document.getElementById("status").innerHTML = "Refresh Done";
+        }
+    </script>
+</body>
+</html>
